@@ -35,7 +35,24 @@
         </div>
     </div>
     <script>
-    // Escríbe aquí tu código
+    let boton = document.querySelectorAll("button");
+    let datos = document.querySelectorAll("input");
+    let resultado = document.querySelector(".resultado");
+
+    boton[0].addEventListener("click", () => {
+        let resultadoSuma =  parseInt(datos[0].value) + parseInt(datos[1].value);
+        resultado.innerHTML = resultadoSuma;
+    })
+
+    boton[1].addEventListener("click", () => {
+        let resultadorResta =  parseInt(datos[0].value) - parseInt(datos[1].value);
+        if(resultadorResta > 0){
+        resultado.innerHTML = resultadorResta;
+        } else{
+            resultado.innerHTML = "0";
+        }
+    })
+
     </script>
 </body>
 

@@ -35,7 +35,12 @@
     </div>
 </div>
     <script>
-    // Escríbe aquí tu código
+    let box = document.querySelector("#caja");
+    document.querySelectorAll("button").forEach(boton => {
+        boton.addEventListener("click", e => {
+            box.style.backgroundColor = e.target.style.backgroundColor
+        })
+    })
     </script>
 </body>
 
